@@ -5,8 +5,9 @@ import { useDispatch } from "react-redux";
 import { searchShipments } from "../Redux/Slice/shipmentSlice";
 import { searchclients } from "../Redux/Slice/clientSlice";
 import { searchinvoices } from "../Redux/Slice/invoiceSlice";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Header({ isSearchEnabled,page }) {
+  const navigate=useNavigate()
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dispatch=useDispatch()
    const [query, setQuery] = useState("");
@@ -50,7 +51,7 @@ console.log(value);
       <div className="flex justify-between items-center px-6 py-3">
         {/* Logo */}
         <div className="text-2xl font-bold tracking-wide">
-          Cargo<span className="text-[#0ABAB5]">Portl</span>
+         <Link to={'/'}> Cargo<span className="text-[#0ABAB5]">Portl</span></Link>
         </div>
 
         {/* Conditional Search Bar */}
