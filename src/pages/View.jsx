@@ -85,7 +85,7 @@ export default function View() {
         invoice: { ...invoice, id: invoice.id },
       })
     );
-    navigate(-1);
+    navigate('/');
   };
 
   const handleDelete = () => {
