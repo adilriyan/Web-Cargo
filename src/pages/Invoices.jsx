@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import jsPDF from "jspdf";
 import * as htmlToImage from "html-to-image";
 import { useDispatch } from "react-redux";
-import swal from "sweetalert"; // ✅ make sure this is installed: npm i sweetalert
+import swal from "sweetalert";
 import { useSelector } from "react-redux";
 import { fetchInvoices } from "../Redux/Slice/invoiceSlice";
 import { fetchShipments } from "../Redux/Slice/shipmentSlice";
